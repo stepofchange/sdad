@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry including="**/*.java" kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/Program/OpenCV-android-sdk/samples/face-detection/jni/prebuild"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="/home/stepofchange/javacv-bin/ffmpeg.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/stepofchange/javacv-bin/javacpp.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/stepofchange/javacv-bin/javacv.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/stepofchange/javacv-bin/opencv.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

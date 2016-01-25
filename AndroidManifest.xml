@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.opencv.samples.facedetect"
+    android:versionCode="301"
+    android:versionName="3.01" >
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddPerson"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name="ViewAddPerson"></activity>
+        <activity android:name="TestActivity"></activity>
+        
+        <activity 
+            android:label="LockScreen"
+          android:screenOrientation="landscape"
+          android:launchMode="singleInstance" 
+          android:stateNotNeeded="true" 
+            android:name=".LockScreen">   
+       <intent-filter >
+           <category android:name="android.intent.category.LAUNCHER" />
+       </intent-filter>
+        </activity>
+
+        
+
+        <receiver
+            android:enabled="true"
+            android:name="org.opencv.samples.facedetect.lockScreenReciver" >
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+            </intent-filter>
+        </receiver>
+        <service android:name=".MyService" >
+        </service>
+    </application>
+
+    
+    
+    
+   
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk android:minSdkVersion="11"
+        android:targetSdkVersion="23" />
+
+    
+    
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="by.arriva.permission.MANAGE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-feature
+        android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+
+</manifest>
